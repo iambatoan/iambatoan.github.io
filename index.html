@@ -1,75 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ads Money — AdMob, AdSense & YouTube earnings tracker for iOS</title>
-<meta name="description" content="Ads Money is an iOS app that shows your Google AdMob, AdSense and YouTube estimated earnings in one private, read-only dashboard.">
-<style>
-  :root{--brand:#1D78F2;--deep:#1E55EE;--cyan:#19E1FE;--text:#0e1420;--muted:#5b6572;--bg:#f7f9fc}
-  *{margin:0;box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
-  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
-  header{padding:72px 0 48px;text-align:center;background:linear-gradient(135deg,var(--cyan),var(--brand) 50%,var(--deep));color:#fff}
-  header img{width:96px;height:96px;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.25);margin-bottom:18px}
-  h1{font-size:36px;letter-spacing:-.5px}
-  header .tag{opacity:.9;margin-top:10px;font-size:18px}
-  header .sub{opacity:.75;margin-top:6px;font-size:14px}
-  section{padding:44px 0 8px}
-  h2{font-size:22px;margin-bottom:14px;letter-spacing:-.3px}
-  .card{background:#fff;border:1px solid #e3e9f1;border-radius:18px;padding:20px 22px;margin-bottom:14px}
-  .card h3{font-size:16px;margin-bottom:4px}
-  .card p,.card li{color:var(--muted);font-size:14px}
-  .card ul{padding-left:20px;margin-top:6px}
-  footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:13px}
-  footer a{color:var(--brand);text-decoration:none;margin:0 10px}
-</style>
-</head>
-<body>
-<header>
-  <div class="wrap">
-    <img src="logo.png" alt="Ads Money app icon">
-    <h1>Ads Money</h1>
-    <p class="tag">An iOS app that shows your Google AdMob, AdSense and YouTube estimated earnings in one private dashboard.</p>
-    <p class="sub">Read-only access · No Ads Money server · Your data stays on your device</p>
-  </div>
-</header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="google-site-verification"
+      content="SR6W7IQu6-iBKly771BjKNi8DqwjZcHf8I3L_ysL1bA"
+    />
 
-<section>
-  <div class="wrap">
-    <h2>What Ads Money is for</h2>
-    <div class="card">
-      <p><strong>Ads Money</strong> is a mobile earnings tracker for app publishers and creators. Its single purpose is to let you view, on your iPhone, the advertising revenue that Google already reports to you across AdMob, AdSense and YouTube — without opening three separate dashboards.</p>
-    </div>
-    <div class="card"><h3>One clear overview</h3><p>Estimated AdMob earnings for today, yesterday, this month and over time, with breakdowns by app, country, ad format, ad unit and platform, plus mediation reports.</p></div>
-    <div class="card"><h3>AdSense &amp; YouTube in one place</h3><p>Your unpaid AdSense balance, payment history, and YouTube revenue trends with top videos and country splits.</p></div>
-  </div>
-</section>
+    <title>Ads Money — AdMob, AdSense & YouTube earnings tracker for iOS</title>
+    <meta
+      name="description"
+      content="Ads Money is an iOS app that shows your Google AdMob, AdSense and YouTube estimated earnings in one private, read-only dashboard."
+    />
+    <style>
+      :root {
+        --brand: #1d78f2;
+        --deep: #1e55ee;
+        --cyan: #19e1fe;
+        --text: #0e1420;
+        --muted: #5b6572;
+        --bg: #f7f9fc;
+      }
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.6;
+      }
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      header {
+        padding: 72px 0 48px;
+        text-align: center;
+        background: linear-gradient(
+          135deg,
+          var(--cyan),
+          var(--brand) 50%,
+          var(--deep)
+        );
+        color: #fff;
+      }
+      header img {
+        width: 96px;
+        height: 96px;
+        border-radius: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        margin-bottom: 18px;
+      }
+      h1 {
+        font-size: 36px;
+        letter-spacing: -0.5px;
+      }
+      header .tag {
+        opacity: 0.9;
+        margin-top: 10px;
+        font-size: 18px;
+      }
+      header .sub {
+        opacity: 0.75;
+        margin-top: 6px;
+        font-size: 14px;
+      }
+      section {
+        padding: 44px 0 8px;
+      }
+      h2 {
+        font-size: 22px;
+        margin-bottom: 14px;
+        letter-spacing: -0.3px;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #e3e9f1;
+        border-radius: 18px;
+        padding: 20px 22px;
+        margin-bottom: 14px;
+      }
+      .card h3 {
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+      .card p,
+      .card li {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .card ul {
+        padding-left: 20px;
+        margin-top: 6px;
+      }
+      footer {
+        padding: 40px 0 56px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      footer a {
+        color: var(--brand);
+        text-decoration: none;
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <img src="logo.png" alt="Ads Money app icon" />
+        <h1>Ads Money</h1>
+        <p class="tag">
+          An iOS app that shows your Google AdMob, AdSense and YouTube estimated
+          earnings in one private dashboard.
+        </p>
+        <p class="sub">
+          Read-only access · No Ads Money server · Your data stays on your
+          device
+        </p>
+      </div>
+    </header>
 
-<section>
-  <div class="wrap">
-    <h2>How Ads Money uses your Google data</h2>
-    <div class="card">
-      <ul>
-        <li>You sign in with Google and grant <strong>read-only</strong> reporting scopes (AdMob, AdSense, YouTube Analytics).</li>
-        <li>Your device requests reports <strong>directly from Google's APIs</strong> and renders them on screen.</li>
-        <li>Ads Money operates <strong>no server, database or analytics backend</strong> — your earnings data is never uploaded to us, sold, or shared, and report data is kept only on your device.</li>
-        <li>You can revoke access at any time from the app or at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
-      </ul>
-      <p style="margin-top:8px">Full details in the <a href="privacy.html">Privacy Policy</a>, including our Google API Services Limited Use disclosure.</p>
-    </div>
-  </div>
-</section>
+    <section>
+      <div class="wrap">
+        <h2>What Ads Money is for</h2>
+        <div class="card">
+          <p>
+            <strong>Ads Money</strong> is a mobile earnings tracker for app
+            publishers and creators. Its single purpose is to let you view, on
+            your iPhone, the advertising revenue that Google already reports to
+            you across AdMob, AdSense and YouTube — without opening three
+            separate dashboards.
+          </p>
+        </div>
+        <div class="card">
+          <h3>One clear overview</h3>
+          <p>
+            Estimated AdMob earnings for today, yesterday, this month and over
+            time, with breakdowns by app, country, ad format, ad unit and
+            platform, plus mediation reports.
+          </p>
+        </div>
+        <div class="card">
+          <h3>AdSense &amp; YouTube in one place</h3>
+          <p>
+            Your unpaid AdSense balance, payment history, and YouTube revenue
+            trends with top videos and country splits.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<footer>
-  <div class="wrap">
-    <p>
-      <a href="privacy.html">Privacy Policy</a> ·
-      <a href="terms.html">Terms of Service</a> ·
-      <a href="mailto:iambatoan@gmail.com">Contact</a>
-    </p>
-    <p style="margin-top:10px">© 2026 Ads Money · Developed by Toan Nguyen (iambatoan@gmail.com).<br>Not affiliated with or endorsed by Google. AdMob, AdSense and YouTube are trademarks of Google LLC.</p>
-  </div>
-</footer>
-</body>
+    <section>
+      <div class="wrap">
+        <h2>How Ads Money uses your Google data</h2>
+        <div class="card">
+          <ul>
+            <li>
+              You sign in with Google and grant
+              <strong>read-only</strong> reporting scopes (AdMob, AdSense,
+              YouTube Analytics).
+            </li>
+            <li>
+              Your device requests reports
+              <strong>directly from Google's APIs</strong> and renders them on
+              screen.
+            </li>
+            <li>
+              Ads Money operates
+              <strong>no server, database or analytics backend</strong> — your
+              earnings data is never uploaded to us, sold, or shared, and report
+              data is kept only on your device.
+            </li>
+            <li>
+              You can revoke access at any time from the app or at
+              <a href="https://myaccount.google.com/permissions"
+                >myaccount.google.com/permissions</a
+              >.
+            </li>
+          </ul>
+          <p style="margin-top: 8px">
+            Full details in the <a href="privacy.html">Privacy Policy</a>,
+            including our Google API Services Limited Use disclosure.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <p>
+          <a href="privacy.html">Privacy Policy</a> ·
+          <a href="terms.html">Terms of Service</a> ·
+          <a href="mailto:iambatoan@gmail.com">Contact</a>
+        </p>
+        <p style="margin-top: 10px">
+          © 2026 Ads Money · Developed by Toan Nguyen (iambatoan@gmail.com).<br />Not
+          affiliated with or endorsed by Google. AdMob, AdSense and YouTube are
+          trademarks of Google LLC.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
