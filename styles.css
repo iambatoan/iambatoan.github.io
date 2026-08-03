@@ -890,3 +890,34 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Disclosure table — Google user data recipients (privacy policy) */
+.legal-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+  font-size: 0.95rem;
+}
+.legal-table th,
+.legal-table td {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.legal-table th {
+  background: rgba(29, 120, 242, 0.06);
+  font-weight: 600;
+}
+@media (max-width: 620px) {
+  .legal-table,
+  .legal-table tbody,
+  .legal-table tr,
+  .legal-table td {
+    display: block;
+    width: 100%;
+  }
+  .legal-table thead { display: none; }
+  .legal-table tr { margin-bottom: 12px; }
+}

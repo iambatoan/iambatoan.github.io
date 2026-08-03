@@ -26,7 +26,7 @@
     <main>
       <header class="legal-hero shell">
         <h1>Privacy Policy</h1>
-        <p class="date">Last updated: 1 August 2026 · <a href="index.html">AdsMoney</a></p>
+        <p class="date">Last updated: 3 August 2026 · <a href="index.html">AdsMoney</a></p>
       </header>
 
       <div class="shell legal-layout">
@@ -73,8 +73,64 @@
           </section>
 
           <section class="legal-section">
-            <h2>Google API Services — Limited Use disclosure</h2>
-            <p>AdsMoney's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. In particular, Google user data is used only to provide the earnings-viewing features you see in the app, is never sold, is never used for advertising targeting, and is never read by humans.</p>
+            <h2>Who we share, transfer or disclose Google user data with</h2>
+<div class="note"><strong>No one.</strong> AdsMoney does not share, transfer, sell, rent, trade or otherwise disclose Google user data to any third party — not to affiliates, not to service providers, not to advertisers, and not to us. The app is structurally incapable of it: there is no AdsMoney server for the data to be sent to.</div>
+<p>For complete transparency, these are the only outside parties involved in running AdsMoney at all, and exactly what each one receives:</p>
+<table class="legal-table">
+  <thead><tr><th>Party</th><th>Google user data they receive</th><th>Why they are involved</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Google</strong> — AdMob, AdSense and YouTube Analytics APIs</td>
+      <td>Nothing disclosed by us. Google is the origin of this data, not a recipient of it: your device requests your own reports directly from Google over an encrypted connection.</td>
+      <td>To retrieve the reports you asked to see.</td>
+    </tr>
+    <tr>
+      <td><strong>Apple</strong> — App Store and StoreKit</td>
+      <td><strong>None.</strong> Apple processes AdsMoney Pro subscriptions and receives no Google user data, no Google account identifier and no earnings figure.</td>
+      <td>To process subscription payments.</td>
+    </tr>
+    <tr>
+      <td><strong>Google Mobile Ads SDK</strong> — the single inline ad shown in the free tier</td>
+      <td><strong>None.</strong> Ad requests carry no AdMob, AdSense or YouTube figures, no publisher ID, no Google account identifier and no email address. The advertising SDK operates independently of your Google sign-in and has no access to it.</td>
+      <td>To show the free tier's inline ad.</td>
+    </tr>
+    <tr>
+      <td><strong>Anyone else</strong></td>
+      <td><strong>None.</strong> There is no AdsMoney server, database, analytics provider, crash-reporting provider, hosting provider, CDN or subprocessor that touches Google user data at any point.</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+<p>Specifically, and without exception, Google user data obtained through AdsMoney is <strong>never</strong>:</p>
+<ul>
+  <li>sold, rented or licensed to anyone;</li>
+  <li>transferred to data brokers, information resellers or any other information-transfer service;</li>
+  <li>used for serving advertisements, including personalised, targeted or retargeted advertising;</li>
+  <li>used to determine credit-worthiness or for lending purposes;</li>
+  <li>used to develop, improve or train generalised artificial-intelligence or machine-learning models;</li>
+  <li>read by a human being. The only exceptions are the narrow ones the Google API Services User Data Policy permits — with your explicit prior consent for a specific action you asked for, where necessary for security purposes such as investigating abuse, or where required to comply with applicable law. None has ever occurred, because the data never leaves your device.</li>
+</ul>
+
+<h2>How we protect Google user data</h2>
+<p>Because AdsMoney runs no server, the strongest protection is structural: there is no central copy of your data to breach, no employee who could query it, and no backup of it anywhere but your own device. On top of that:</p>
+<ul>
+  <li><strong>Encrypted in transit.</strong> Every request to Google's APIs and token endpoints uses HTTPS with TLS 1.2 or higher, with certificate validation enforced by iOS. The app makes no plaintext HTTP request, and sends Google user data to no host other than Google's own API endpoints.</li>
+  <li><strong>Encrypted at rest.</strong> Your OAuth access and refresh tokens are held in the iOS Keychain, encrypted by the device's hardware-backed cryptographic engine. They are marked <code>kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly</code>: readable only after you have unlocked the device since it booted, never synchronised to iCloud Keychain, and never included in an iCloud, Finder or iTunes backup. Everything else the app keeps lives in its sandboxed container under iOS file-level encryption tied to your device passcode.</li>
+  <li><strong>Access control.</strong> The iOS sandbox prevents any other app from reading AdsMoney's storage. The container shared between the app and its Home Screen widget is a private app group readable only by AdsMoney.</li>
+  <li><strong>Least privilege.</strong> AdsMoney requests read-only scopes exclusively. It is technically incapable of modifying, creating or deleting anything in your Google account — no campaign, video, payment or setting.</li>
+  <li><strong>Secure authorisation.</strong> Sign-in uses the OAuth 2.0 authorization code flow with PKCE (S256 challenge) and a random <code>state</code> value verified on return, protecting the exchange against interception and cross-site request forgery. No client secret is embedded in the app, and credentials are never written to logs, analytics or crash reports.</li>
+  <li><strong>Prompt revocation.</strong> Signing out revokes the token with Google immediately and erases the stored session from the Keychain, so the grant cannot be reused even if the device is later compromised.</li>
+</ul>
+
+<h2>Data retention and deletion</h2>
+<ul>
+  <li><strong>Report data</strong> — earnings, impressions, payments and YouTube revenue — is held in memory for the current session and discarded when the app closes. Widget snapshots are overwritten on each refresh and cleared when you sign out or switch accounts.</li>
+  <li><strong>Your Google session</strong> is kept only until you sign out or delete the app, so you are not asked to sign in every time you open it.</li>
+  <li><strong>Deleting everything</strong> takes one action: sign out in the app. That revokes the grant with Google and erases the session, cached widget snapshots and account selection from the device. Deleting the app removes anything that remains. Because we hold no copy, there is nothing on our side to request the deletion of and no retention period that applies to us.</li>
+</ul>
+
+<h2>Google API Services — Limited Use disclosure</h2>
+            <p>AdsMoney's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. In particular, Google user data is used only to provide the earnings-viewing features you see in the app, is never sold, is never used for advertising targeting, is never used to develop, improve or train generalised AI or machine-learning models, and is never read by humans. AdsMoney does not transfer Google user data to any third party, and does not use or transfer it for any purpose unrelated to the earnings-viewing features described above.</p>
           </section>
 
           <section class="legal-section">
