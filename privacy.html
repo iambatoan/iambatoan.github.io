@@ -1,84 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — AdsMoney</title>
-<style>
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;color:#0e1420;background:#fff;line-height:1.7;margin:0}
-  .wrap{max-width:720px;margin:0 auto;padding:48px 24px 72px}
-  h1{font-size:30px;letter-spacing:-.4px;margin-bottom:4px}
-  .date{color:#5b6572;font-size:14px;margin-bottom:32px}
-  h2{font-size:20px;margin:32px 0 10px;letter-spacing:-.2px}
-  p,li{color:#333c48;font-size:15px}
-  ul{padding-left:22px}
-  code{background:#f1f4f8;border-radius:6px;padding:1px 6px;font-size:13px}
-  a{color:#1D78F2}
-  .note{background:#eef5ff;border-radius:12px;padding:14px 16px;font-size:14px}
-</style>
-</head>
-<body>
-<div class="wrap">
-<h1>Privacy Policy</h1>
-<p class="date">Last updated: 1 August 2026 · <a href="index.html">AdsMoney</a></p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f7fb" />
+    <title>Privacy Policy — AdsMoney</title>
+    <link rel="icon" href="logo-120.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="legal-page">
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="shell nav-inner">
+        <a class="brand-link" href="index.html" aria-label="AdsMoney home">
+          <img src="logo.png" alt="" />
+          <span>AdsMoney</span>
+        </a>
+        <div class="nav-links">
+          <a href="privacy.html" aria-current="page">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="mailto:iambatoan@gmail.com">Contact</a>
+        </div>
+      </div>
+    </nav>
 
-<p>AdsMoney ("the app", "we") is an iOS application that displays your Google advertising and YouTube earnings. This policy explains what data the app accesses, how it is used, and what never happens with it.</p>
+    <main>
+      <header class="legal-hero shell">
+        <h1>Privacy Policy</h1>
+        <p class="date">Last updated: 1 August 2026 · <a href="index.html">AdsMoney</a></p>
+      </header>
 
-<h2>The short version</h2>
-<div class="note">AdsMoney has <strong>no server</strong>. Your reports travel directly between your device and Google's APIs over an encrypted connection, with <strong>read-only</strong> access, and everything the app keeps stays on your device. We cannot see, collect, sell or share your earnings data — it never reaches us.</div>
+      <div class="shell legal-layout">
+        <article class="legal-article">
+          <div class="legal-lead">
+            <p>AdsMoney ("the app", "we") is an iOS application that displays your Google advertising and YouTube earnings. This policy explains what data the app accesses, how it is used, and what never happens with it.</p>
+          </div>
 
-<h2>Data accessed from your Google Account</h2>
-<p>When you sign in with Google, the app requests read-only access to:</p>
-<ul>
-  <li><strong>Basic profile</strong> (name, email, profile photo) — shown in the app so you know which account is connected.</li>
-  <li><strong>AdMob reporting data</strong> (<code>admob.readonly</code>) — estimated earnings, impressions, eCPM and related reporting metrics.</li>
-  <li><strong>AdSense payment data</strong> (<code>adsense.readonly</code>) — unpaid balance and payment history.</li>
-  <li><strong>YouTube Analytics monetary reports</strong> (<code>yt-analytics-monetary.readonly</code>) and <strong>YouTube channel metadata</strong> (<code>youtube.readonly</code>) — revenue trends, top videos and country splits. These scopes are optional and only requested if you choose to connect YouTube.</li>
-</ul>
-<p>All access is read-only. The app cannot modify your ads, campaigns, videos, payments or any other part of your Google account.</p>
+          <section class="legal-section">
+            <h2>The short version</h2>
+            <div class="note">AdsMoney has <strong>no server</strong>. Your reports travel directly between your device and Google's APIs over an encrypted connection, with <strong>read-only</strong> access, and everything the app keeps stays on your device. We cannot see, collect, sell or share your earnings data — it never reaches us.</div>
+          </section>
 
-<h2>How that data is used</h2>
-<ul>
-  <li>Reports are fetched from Google's APIs directly by your device and rendered on screen.</li>
-  <li>Nothing is uploaded to any AdsMoney server, because none exists. There is no analytics backend, no database and no cross-device sync operated by us.</li>
-</ul>
+          <section class="legal-section">
+            <h2>Data accessed from your Google Account</h2>
+            <p>When you sign in with Google, the app requests read-only access to:</p>
+            <ul>
+              <li><strong>Basic profile</strong> (name, email, profile photo) — shown in the app so you know which account is connected.</li>
+              <li><strong>AdMob reporting data</strong> (<code>admob.readonly</code>) — estimated earnings, impressions, eCPM and related reporting metrics.</li>
+              <li><strong>AdSense payment data</strong> (<code>adsense.readonly</code>) — unpaid balance and payment history.</li>
+              <li><strong>YouTube Analytics monetary reports</strong> (<code>yt-analytics-monetary.readonly</code>) and <strong>YouTube channel metadata</strong> (<code>youtube.readonly</code>) — revenue trends, top videos and country splits. These scopes are optional and only requested if you choose to connect YouTube.</li>
+            </ul>
+            <p>All access is read-only. The app cannot modify your ads, campaigns, videos, payments or any other part of your Google account.</p>
+          </section>
 
-<h2>What is stored on your device</h2>
-<p>So that you are not asked to sign in every time you open the app, and so Home Screen widgets can show a figure before their next refresh completes, some data is kept on the device between sessions:</p>
-<ul>
-  <li><strong>Your Google session</strong> — the OAuth access and refresh tokens issued when you sign in, held in the iOS Keychain. They are shared with the AdsMoney widget extension through a private app group so widgets can refresh on their own, and they are never transmitted anywhere except to Google's own token endpoint.</li>
-  <li><strong>Widget snapshots</strong> — the most recent figures each widget displayed (earnings totals, a short daily series, unpaid balance and recent payouts), cached in the same private app group container so a widget can render while its next update is still loading.</li>
-  <li><strong>Recently viewed reports</strong> — a short-lived in-memory cache for the current session, so switching date ranges does not re-request the same report.</li>
-  <li><strong>Preferences</strong> — selected account ID, reporting time zone, appearance and accent theme, and your subscription status as last verified with Apple.</li>
-</ul>
-<p>All of it lives inside the app's own sandbox on your device. Deleting the app removes it.</p>
+          <section class="legal-section">
+            <h2>How that data is used</h2>
+            <ul>
+              <li>Reports are fetched from Google's APIs directly by your device and rendered on screen.</li>
+              <li>Nothing is uploaded to any AdsMoney server, because none exists. There is no analytics backend, no database and no cross-device sync operated by us.</li>
+            </ul>
+          </section>
 
-<h2>Google API Services — Limited Use disclosure</h2>
-<p>AdsMoney's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. In particular, Google user data is used only to provide the earnings-viewing features you see in the app, is never sold, is never used for advertising targeting, and is never read by humans.</p>
+          <section class="legal-section">
+            <h2>What is stored on your device</h2>
+            <p>So that you are not asked to sign in every time you open the app, and so Home Screen widgets can show a figure before their next refresh completes, some data is kept on the device between sessions:</p>
+            <ul>
+              <li><strong>Your Google session</strong> — the OAuth access and refresh tokens issued when you sign in, held in the iOS Keychain. They are shared with the AdsMoney widget extension through a private app group so widgets can refresh on their own, and they are never transmitted anywhere except to Google's own token endpoint.</li>
+              <li><strong>Widget snapshots</strong> — the most recent figures each widget displayed (earnings totals, a short daily series, unpaid balance and recent payouts), cached in the same private app group container so a widget can render while its next update is still loading.</li>
+              <li><strong>Recently viewed reports</strong> — a short-lived in-memory cache for the current session, so switching date ranges does not re-request the same report.</li>
+              <li><strong>Preferences</strong> — selected account ID, reporting time zone, appearance and accent theme, and your subscription status as last verified with Apple.</li>
+            </ul>
+            <p>All of it lives inside the app's own sandbox on your device. Deleting the app removes it.</p>
+          </section>
 
-<h2>Advertising</h2>
-<p>The free version of AdsMoney shows inline ads served by the Google Mobile Ads SDK (AdMob). AdsMoney Pro removes them. Ad requests only start after Google's User Messaging Platform (UMP) consent flow allows it in your region.</p>
-<p>The advertising SDK is operated by Google, not by us, and it collects data independently of the app. According to Google's own disclosures this can include device identifiers, advertising data, product interaction and crash or performance diagnostics. We receive none of it — it goes to Google. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> and <a href="https://support.google.com/admob/answer/9012903" target="_blank" rel="noopener">how Google uses data from apps that use its services</a>.</p>
-<p><strong>No tracking.</strong> AdsMoney does not present Apple's App Tracking Transparency prompt and does not ask for permission to track you, because it does not: ads personalisation is switched off for every request the app makes, Google's publisher first-party identifier is disabled, and no identifier from this app is linked to your activity in other companies' apps or websites. The ads you see are contextual, not built from a profile of you.</p>
+          <section class="legal-section">
+            <h2>Google API Services — Limited Use disclosure</h2>
+            <p>AdsMoney's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. In particular, Google user data is used only to provide the earnings-viewing features you see in the app, is never sold, is never used for advertising targeting, and is never read by humans.</p>
+          </section>
 
-<h2>Purchases</h2>
-<p>AdsMoney Pro subscriptions are processed entirely by Apple through your Apple&nbsp;ID. We never see your payment details.</p>
+          <section class="legal-section">
+            <h2>Advertising</h2>
+            <p>The free version of AdsMoney shows inline ads served by the Google Mobile Ads SDK (AdMob). AdsMoney Pro removes them. Ad requests only start after Google's User Messaging Platform (UMP) consent flow allows it in your region.</p>
+            <p>The advertising SDK is operated by Google, not by us, and it collects data independently of the app. According to Google's own disclosures this can include device identifiers, advertising data, product interaction and crash or performance diagnostics. We receive none of it — it goes to Google. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> and <a href="https://support.google.com/admob/answer/9012903" target="_blank" rel="noopener">how Google uses data from apps that use its services</a>.</p>
+            <p><strong>No tracking.</strong> AdsMoney does not present Apple's App Tracking Transparency prompt and does not ask for permission to track you, because it does not: ads personalisation is switched off for every request the app makes, Google's publisher first-party identifier is disabled, and no identifier from this app is linked to your activity in other companies' apps or websites. The ads you see are contextual, not built from a profile of you.</p>
+          </section>
 
-<h2>Revoking access</h2>
-<ul>
-  <li>Sign out in the app (Settings → Sign out). This revokes the token with Google, clears the stored session from the Keychain, and empties the widget cache and account selection from your device.</li>
-  <li>Deleting the app removes everything listed under "What is stored on your device".</li>
-  <li>You can additionally revoke AdsMoney's access at any time at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.</li>
-</ul>
+          <section class="legal-section">
+            <h2>Purchases</h2>
+            <p>AdsMoney Pro subscriptions are processed entirely by Apple through your Apple&nbsp;ID. We never see your payment details.</p>
+          </section>
 
-<h2>Children</h2>
-<p>AdsMoney is intended for publishers managing Google advertising accounts and is not directed at children under 13.</p>
+          <section class="legal-section">
+            <h2>Revoking access</h2>
+            <ul>
+              <li>Sign out in the app (Settings → Sign out). This revokes the token with Google, clears the stored session from the Keychain, and empties the widget cache and account selection from your device.</li>
+              <li>Deleting the app removes everything listed under "What is stored on your device".</li>
+              <li>You can additionally revoke AdsMoney's access at any time at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.</li>
+            </ul>
+          </section>
 
-<h2>Changes</h2>
-<p>If this policy changes, the updated version will be published at this address with a new "Last updated" date.</p>
+          <section class="legal-section">
+            <h2>Children</h2>
+            <p>AdsMoney is intended for publishers managing Google advertising accounts and is not directed at children under 13.</p>
+          </section>
 
-<h2>Contact</h2>
-<p>Questions about privacy: <a href="mailto:iambatoan@gmail.com">iambatoan@gmail.com</a></p>
-</div>
-</body>
+          <section class="legal-section">
+            <h2>Changes</h2>
+            <p>If this policy changes, the updated version will be published at this address with a new "Last updated" date.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>Contact</h2>
+            <p>Questions about privacy: <a href="mailto:iambatoan@gmail.com">iambatoan@gmail.com</a></p>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="legal-footer shell"><a href="index.html">AdsMoney</a></footer>
+  </body>
 </html>
