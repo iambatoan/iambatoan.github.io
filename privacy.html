@@ -37,7 +37,7 @@
 
           <section class="legal-section">
             <h2>The short version</h2>
-            <div class="note">AdsMoney has <strong>no server</strong>. Your reports travel directly between your device and Google's APIs over an encrypted connection, with <strong>read-only</strong> access, and everything the app keeps stays on your device. We cannot see, collect, sell or share your earnings data — it never reaches us.</div>
+            <div class="note">AdsMoney has <strong>no application server</strong>. Your reports travel directly between your device and Google's APIs over an encrypted connection, with <strong>read-only</strong> access, and everything the app keeps stays on your device. We cannot see, collect, sell or share your earnings data — it never reaches us or Firebase. AdsMoney sends limited, anonymous app-usage analytics to Google Firebase Analytics as described below; those events never contain Google account data or report figures.</div>
           </section>
 
           <section class="legal-section">
@@ -56,8 +56,16 @@
             <h2>How that data is used</h2>
             <ul>
               <li>Reports are fetched from Google's APIs directly by your device and rendered on screen.</li>
-              <li>Nothing is uploaded to any AdsMoney server, because none exists. There is no analytics backend, no database and no cross-device sync operated by us.</li>
+              <li>Nothing is uploaded to any AdsMoney server, because none exists. There is no report database or cross-device sync operated by us. Limited product-usage events that contain no Google user data or report figures are sent separately to Firebase Analytics as described below.</li>
             </ul>
+          </section>
+
+          <section class="legal-section">
+            <h2 id="analytics">Anonymous app analytics</h2>
+            <p>AdsMoney uses Google Firebase Analytics to understand whether the app is working and where its onboarding and subscription flows can be improved. Firebase assigns a random app-instance identifier and automatically measures basic lifecycle information such as first open, sessions and app interaction. It may also process app and device information, a coarse location derived from a masked IP address, and StoreKit subscription events such as product identifier, product name and price.</p>
+            <p>AdsMoney additionally records a small fixed set of events: onboarding completion; Google sign-in success, cancellation or broad failure category; report load success, empty result or broad failure category; first successful live report; paywall source; purchase and restore outcome; and opening Apple's offer-code sheet. Debug builds do not send analytics. A report backed by bundled sample data is labelled only as <code>sample</code>; none of its sample figures or labels is sent.</p>
+            <p>These events <strong>never include</strong> your name, email address, Google user ID, publisher or account ID, app/ad-unit/channel/video ID, OAuth token, report date range, raw API response or error message, earnings, revenue, balance, payment amount, impressions, or any other figure from your Google reports. AdsMoney does not set a Firebase user ID and does not link analytics to your Google sign-in.</p>
+            <p>AdsMoney uses the Firebase Analytics Core package, which has no IDFA collection capability. Collection of Apple's IDFV, automatic screen reporting and advertising-personalisation signals is disabled. Analytics is used only for product measurement, not for tracking you across other companies' apps or websites and not for personalised advertising. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
           </section>
 
           <section class="legal-section">
@@ -97,8 +105,13 @@
                   <td>To show the free tier's inline ad.</td>
                 </tr>
                 <tr>
+                  <td><strong>Google Firebase Analytics</strong></td>
+                  <td><strong>No Google user data and no report figures.</strong> Firebase receives the anonymous app events and basic metadata described under “Anonymous app analytics”. It has no access to the app's OAuth session or Google reporting responses.</td>
+                  <td>To measure app reliability, onboarding and subscription conversion.</td>
+                </tr>
+                <tr>
                   <td><strong>Anyone else</strong></td>
-                  <td><strong>None.</strong> There is no AdsMoney server, database, analytics provider, crash-reporting provider, hosting provider, CDN or subprocessor that touches Google user data at any point.</td>
+                  <td><strong>None.</strong> There is no AdsMoney server, report database, other analytics provider or crash-reporting provider, and no third party touches Google user data at any point.</td>
                   <td>—</td>
                 </tr>
               </tbody>
@@ -132,7 +145,8 @@
             <ul>
               <li><strong>Report data</strong> — earnings, impressions, payments and YouTube revenue — is held in memory for the current session and discarded when the app closes. Widget snapshots are overwritten on each refresh and cleared when you sign out or switch accounts.</li>
               <li><strong>Your Google session</strong> is kept only until you sign out or delete the app, so you are not asked to sign in every time you open it.</li>
-              <li><strong>Deleting everything</strong> takes one action: sign out in the app. That revokes the grant with Google and erases the session, cached widget snapshots and account selection from the device. Deleting the app removes anything that remains. Because we hold no copy, there is nothing on our side to request the deletion of and no retention period that applies to us.</li>
+              <li><strong>Deleting app data</strong> takes one action: sign out in the app. That revokes the grant with Google and erases the session, cached widget snapshots and account selection from the device. Deleting the app removes anything that remains locally.</li>
+              <li><strong>Anonymous analytics</strong> is retained by Google according to the Firebase and Google Analytics retention settings and policies. Deleting the app stops future collection and removes its local app-instance data, but does not immediately remove events already processed into aggregate analytics reports. Because AdsMoney does not attach your name, email, Google account or a Firebase user ID, these events cannot be looked up using your Google identity.</li>
             </ul>
           </section>
 
@@ -150,7 +164,7 @@
 
           <section class="legal-section">
             <h2>Purchases</h2>
-            <p>AdsMoney Pro subscriptions are processed entirely by Apple through your Apple&nbsp;ID. We never see your payment details.</p>
+            <p>AdsMoney Pro subscriptions are processed entirely by Apple through your Apple&nbsp;ID. We never see your payment details. Firebase Analytics may automatically measure the subscription product identifier, name and price and associates that event only with its anonymous app-instance identifier.</p>
           </section>
 
           <section class="legal-section">
