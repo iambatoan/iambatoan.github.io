@@ -921,3 +921,10 @@ a:focus-visible {
   .legal-table thead { display: none; }
   .legal-table tr { margin-bottom: 12px; }
 }
+
+
+/* Deep links from the OAuth verification thread land on these headings —
+   give the anchor jump some breathing room above the title. */
+.legal-section h2[id] {
+  scroll-margin-top: 24px;
+}
